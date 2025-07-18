@@ -1,5 +1,11 @@
 import { GSM7_CHARS, GSM7_CHARS_EXTENDED, KNOWN_CHAR_TO_GSM_MAP } from "./constants";
 
+/**
+ * Encode a string to GSM7
+ * @param text - The text to encode
+ * @param allowExtended - Whether to allow extended characters
+ * @returns The encoded text
+ */
 export default function encodeGSM7(text: string, allowExtended = true) {
   const allowedArray = [];
   for (const char of text) {

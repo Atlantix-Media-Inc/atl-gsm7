@@ -15,8 +15,13 @@ In order to use this functions, u will have to:
 ```ts
 import gsm7 from 'atl-gsm7';
 
-const originalMessage = '';
-const encodedMessage = gsm7(originalMessage);
+const originalMessage = 'ĂŃĎŘĒŞ alcaraz';
+const encodedMessage = gsm7(originalMessage); // ANDRÉS alcaraz
+
+...
+
+const originalMessage = 'regular text';
+const encodedMessage = gsm7(originalMessage); // regular text
 ```
 
 That's it. ⚡️⚡️🚀🍻
