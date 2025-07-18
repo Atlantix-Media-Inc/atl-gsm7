@@ -14,14 +14,3 @@ export default function encodeGSM7(text: string, allowExtended = true) {
   }
   return allowedArray.join('');
 }
-
-
-// console.log(fillDynamicValues("{$cleanFirstName} {$messageName}", leaddata ,'', message.messageName));
-// leaddata.firstName= "first Name"
-// console.log(fillDynamicValues("{$firstName} ::: {$cleanFirstName}", leaddata ,'', message.messageName));
-// leaddata.firstName = "ĂŃĎŘĒŞ alcaraz"
-// console.log(fillDynamicValues("{$firstName} ::: {$cleanFirstName}", leaddata ,'', message.messageName));
-// leaddata.firstName = "PĂŘimŁ donga"
-// console.log(fillDynamicValues("{$firstName} ::: {$cleanFirstName}", leaddata ,'', message.messageName));
-// leaddata.firstName = "PǻŘimŁ donga"
-// console.log(fillDynamicValues("{$firstName} ::: {$cleanFirstName}", leaddata ,'', message.messageName));
