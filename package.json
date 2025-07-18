@@ -1,0 +1,28 @@
+{
+  "name": "atl-gsm7",
+  "version": "1.0.0",
+  "description": "A simple GSM7 encoder/decoder",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "build:ts": "tsc -p tsconfig.json",
+    "test": "jest",
+    "dev": "watch 'npm run build:ts' src",
+    "test:watch": "npm test -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.28.0",
+    "@babel/core": "^7.28.0",
+    "watch": "^1.0.2",
+    "@babel/preset-env": "^7.28.0",
+    "@types/node": "^24.0.14",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^30.0.4",
+    "babel-preset-env": "^1.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
