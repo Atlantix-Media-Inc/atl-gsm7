@@ -6,7 +6,7 @@ import { GSM7_CHARS, GSM7_CHARS_EXTENDED, KNOWN_CHAR_TO_GSM_MAP } from "./consta
  * @param allowExtended - Whether to allow extended characters
  * @returns The encoded text
  */
-export default function encodeGSM7(text: string, allowExtended = true) {
+const encodeGSM7 = (text: string, allowExtended = true) => {
   const allowedArray = [];
   for (const char of text) {
     if(GSM7_CHARS.includes(char) || (allowExtended && GSM7_CHARS_EXTENDED.includes(char))) {
@@ -20,3 +20,20 @@ export default function encodeGSM7(text: string, allowExtended = true) {
   }
   return allowedArray.join('');
 }
+
+/**
+ * Get non GSM7 characters from a string
+ * @param text - The text to check
+ * @returns The non GSM7 characters
+ */
+const getNonGsm7Chars = (text: string): string => {
+  let nonGsm7Char = "";
+  for (const char of text) {
+    if(!GSM7_CHARS.includes(char) && !GSM7_CHARS_EXTENDED.includes(char)) {
+      nonGsm7Char += char;
+    }
+  }
+  return nonGsm7Char;
+}
+
+export {getNonGsm7Chars, encodeGSM7}
